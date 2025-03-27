@@ -1,0 +1,1 @@
+(()=>{var o={839:(o,r)=>{r.add=function(){return 7}}},r={};console.log("hello node.js");const e=function e(n){var t=r[n];if(void 0!==t)return t.exports;var s=r[n]={exports:{}};return o[n](s,s.exports,e),s.exports}(839);console.log(e.add())})();
