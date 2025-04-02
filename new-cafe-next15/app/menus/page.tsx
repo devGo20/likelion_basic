@@ -1,6 +1,7 @@
 import Link from 'next/link';
+import React from 'react';
 
-export default function Page() {
+const MenuPage: React.FC = () => {
   return (
     <main>
       목록 페이지
@@ -8,4 +9,6 @@ export default function Page() {
       <Link href="/menus/2">상세 페이지</Link>
     </main>
   );
-}
+};
+
+export default MenuPage;
