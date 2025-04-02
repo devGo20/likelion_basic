@@ -1,3 +1,4 @@
+"use client";
 import { ReactNode } from 'react';
 import Basket from './components/Basket';
 type LayoutProps = {
@@ -5,14 +6,9 @@ type LayoutProps = {
 };
 export default function RootLayout({ children }: LayoutProps) {
   return (
-    <html lang="en">
-      <head />
-      <body>
-        <>
+      <>
         {children}
         <Basket/>
       </>
-      </body>
-    </html>
   );
 }

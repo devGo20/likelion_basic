@@ -1,3 +1,4 @@
+"use client";
 import { ReactNode } from 'react';
 import RootHeader from './components/RootHeader';
 import RootFooter from './components/RootFooter';
