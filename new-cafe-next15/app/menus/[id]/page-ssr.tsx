@@ -9,22 +9,19 @@ const MenuPage: FC<MenuPageProps> = async ({
   params
 }): Promise<JSX.Element> => {
   const { id } = params;
-  const fetchMenu = async (id: string) => {
-    const response = await fetch(
-      `https://next15-ts-ssr.new-cafe.com/api/menus/${id}`,
-      {
-        cache: 'no-store'
-      }
-    );
-    if (!response.ok) {
-      throw new Error('Failed to fetch data');
-    }
-    return response.json();
-  };
-  const menuData = await fetchMenu(id);
+  const response = await fetch(`https://next15-ts-ssr.new-cafe.com/api/menus`, {
+    cache: 'no-store'
+  });
+  const data = await response.json();
+  console.log('menuData', data);
   return (
     <main>
-      상세 페이지: {menuData.id}
+      <h2>
+        상세 페이지: {id}
+      </h2>
+      <div>
+        {data.menus[1].korName}
+      </div>
     </main>
   );
 };
