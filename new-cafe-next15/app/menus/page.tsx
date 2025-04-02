@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import React, { FC } from 'react';
+import React, { FC, JSX } from 'react';
 
-const MenuPage: FC = () => {
+const MenuPage: FC = (): JSX.Element => {
   return (
     <main>
       목록 페이지

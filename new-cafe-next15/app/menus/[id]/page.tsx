@@ -1,11 +1,11 @@
-import React from 'react';
-interface MenuPageProps {
+import React, { FC, JSX } from 'react';
+type MenuPageProps = {
   params: {
     id: string;
   };
-}
-
-const MenuPage: React.FC<MenuPageProps> = ({ params }) => {
+};
+// FC<받는 형식> (): 반환 타입
+const MenuPage: FC<MenuPageProps> = ({ params }): JSX.Element => {
   const { id } = params;
   return (
     <main>
