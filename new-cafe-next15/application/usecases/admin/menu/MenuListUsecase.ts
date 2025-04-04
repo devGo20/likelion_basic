@@ -8,17 +8,17 @@ export default class MenuListUsecase {
     this.menuRepository = menuRepository;
   }
 
-  async execute() {
+  async execute(page: string) {
     try {
-      const menus = await this.menuRepository.findAll(); // DTO 반환
+      const menus = await this.menuRepository.findAll(page); // DTO 반환
       const menuListDto: MenuListDto = {
         menus: menus.map(menu => ({
           id: menu.id,
-          korName: menu.korName, // Transform snake_case to camelCase
-          engName: menu.engName // Ensure consistent naming
+          korName: menu.korName,
+          engName: menu.engName
         })),
         totalCount: menus.length,
-        totalPages: Math.ceil(menus.length / 10), // Assuming 10 items per page
+        totalPages: Math.ceil(menus.length / 10),
         hasPreviousPage: false,
         hasNextPage: false,
         pages: []
