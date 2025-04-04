@@ -1,10 +1,11 @@
 'use client';
 import Link from 'next/link';
 import React from 'react';
+import styles from './RootHeader.module.scss';
 
 const RootHeader: React.FC = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <h1>NEW CAFE</h1>
       <nav>
         <ul>
