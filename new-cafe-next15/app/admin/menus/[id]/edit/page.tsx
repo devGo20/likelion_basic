@@ -1,3 +1,3 @@
-export default function EditMenuPage() {
-  return <div>Edit Menu Page</div>;
+export default function MenuEditPage() {
+    return <div></div>;
 }

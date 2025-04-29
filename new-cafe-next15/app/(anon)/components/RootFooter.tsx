@@ -1,6 +1,8 @@
-'use client';
-const RootFooter = () => {
-  return <footer>footer</footer>;
-};
-
-export default RootFooter;
+"use client";
+export default function RootFooter() {
+    return (
+        <footer>
+            footer
+        </footer>
+    );
+}
